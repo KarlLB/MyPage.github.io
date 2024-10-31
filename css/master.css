@@ -1,0 +1,507 @@
+/* *{
+    border: 3px solid black;
+} */
+body {
+    /* background-color: #cef0f5; */
+    background-image: url("../images/BlueTech.png");
+    background-size: 100vw;
+    text-align: center;
+    line-height: 100%;
+    margin-top: 0px;
+    margin: 0px;
+}
+p{
+    text-align: center;
+    line-height: 2;
+}
+nav{
+    padding: 0%;
+}
+button{
+    padding: 0;
+}
+figcaption{
+    width: 99%;
+}
+figure{
+    margin: 5px;
+}
+h2{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+footer{
+    margin-bottom: 60vh;
+}
+.myImg {
+    border-radius: 50%;
+    width: min(200px, 100%);
+    height: auto;
+    border: solid;
+    border-width: 10px;
+    border-color: #cef0f5;
+}
+.div1{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #82d3df;
+}
+.div1 h1{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    font-size:xx-large;
+}
+.bars1{
+    width: 10%;
+    height: 60%;
+    background-color: rgb(212, 230, 237);
+    border-radius: 25%;
+}
+.bars2{
+    display: none;
+}
+.bars {
+    width: 100%;
+    height: 90%;
+    border-radius: 10%;
+}
+.bars1 :hover {
+    background-color: beige;
+}
+.pageTitle{
+    font-weight: bolder;
+    text-align: left;
+    background-color: aquamarine;
+}
+.certificates{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    display: flex;
+    padding: 2px;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.skillsClass{
+    border: solid;
+    border-width: 10px;
+}
+.sidebar{
+    display: none;
+}
+#div0{
+    position: sticky;
+    top: 0px;
+    height: 50px;
+}
+#div2{
+    display: none;
+    position: relative;
+    background-color: #e5f5be;
+    padding: 1%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.message{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    color:white;
+    background-color: black;
+}
+.cv:focus + .message,
+.cv:hover + .message{
+    display: block;
+}
+.skills1{
+    scroll-margin-top: 85px;
+    background-color: rgba(216, 240, 244, 0.5);
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;;
+}
+#contact{
+    scroll-margin-top: 85px;
+    background-color: rgba(177, 236, 246, 0.5);
+    margin-left: 5%;
+    margin-right: 5%;;
+}
+#features p{
+    text-align: left;
+    padding-left: 3px;
+}
+#gang{
+    background-image: url("../images/gangster.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* ***********************************
+
+for the modal: */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+}
+.newModal{
+    /* this class is used by js to apply on the modal */
+    margin: 0px;
+    font-weight: bold;
+    font-size: x-large;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+  }
+  @keyframes fadeIn {   0% { opacity: 0; }   100% { opacity: 1; } } 
+
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    background-color: hsla(132, 19%, 95%, 0.9);
+}
+/* The Close Button */
+.close {
+    color: #1e2020;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 0;
+    padding: 0%;
+    float: right;
+    /* background-color: #003d7a; */
+}
+.close:hover,
+.close:focus {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+/* *********************************************** */
+/* for the certificates modal - just copying the previous modal and changing its classes: */
+/* Hidden by default: */
+.modalCert {
+    display: none; 
+}
+/* this class is used by js to apply on the certificate modal */
+.newModalCert{
+    /* display: block; */
+    margin: 0px;
+    font-weight: bold;
+    font-size: x-large;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+  }
+
+  @keyframes fadeIn {   0% { opacity: 0; }   100% { opacity: 1; } } 
+
+  /* Modal Content/Box */
+.modalCert-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    border: 1px solid #888;
+    width: 95%; 
+    background-color: hsla(132, 19%, 95%, 0.8);
+}
+/* The Close Button */
+.closex {
+    color: #1e2020;
+    float: right;
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 0;
+    padding: 0%;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    background-color: rgb(116, 190, 184);
+    opacity: 0.8;
+}
+.closex:hover,
+.closex:focus {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+.modalImageContent{
+    width: 98%;
+    height: auto;
+    margin-top: 0;
+}
+.modalFigureContent{
+    position: relative;
+}
+/* the medium view screen: */
+@media only screen and (min-width: 700px){
+    body{
+        font-size: larger;
+    }
+    .bars1{
+        display: none;
+    }
+    .bars2{
+        display:inline-flex;
+    }
+    .bars2{
+        width: 10%;
+        height: 60%;
+        background-color: rgb(212, 230, 237);
+        border-radius: 10%;
+    }
+    #skills{
+        font-size: large;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 7vh 40% 40%;
+        overflow: hidden;
+    }
+    #skills h2{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        margin-top: 2%;
+    }
+    #clickMe{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #skillExplanation{
+        grid-column: 2/3;
+        grid-row: 2/4;
+        border-left: 2px solid black;
+    }
+    .firstP{
+        margin-top: 2px;
+    }
+    #contactOuter{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #contactOuter div{
+        width: 40%;
+    }
+    .certificates{
+        grid-column: 1/2;
+        grid-row: 2-4;
+        line-height: 50%;
+        padding: 0%;
+        justify-content: space-between;
+        padding-left: 0%;
+        padding-right: 0%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-self: self-start;
+        padding: 2px;
+    }
+    .certificates svg{
+        width: 60%;
+    }
+    .certificates button{
+        border: 3px solid black;
+        margin: 3px;
+        width: 70%;
+        height: 90%;
+        border-radius: 10%;
+        box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    }
+}
+@media only screen and (min-width: 1024px){
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: x-large;
+    }
+    main {
+        margin-left: 20%;
+    }
+    footer{
+        margin-left: 20%;
+    }
+    .bars2{
+        display: none;
+    }
+    .sidebar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 20%;
+        background-color: #abdbe2;
+        box-sizing: border-box;
+        padding-top: 10%;
+    }
+    .sidebar a{
+        display: block;
+        background-color: aquamarine;
+        padding: 2%;
+        border-radius: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
+        /* margin-bottom: 15%; */
+        margin-top: 10%;
+    }
+    .message2{
+        display: none;
+        /* top: 0; */
+        color:white;
+        background-color: black;
+    }
+    .cv2:focus + .message2,
+    .cv2:hover + .message2{
+        display: block;
+    }
+    .pageTitle{
+        font-size: xx-large;
+    }
+    #skillExplanation{
+        font-size: x-large;
+    }
+    #clickMe{
+        font-size: x-large;
+    }
+    #div2{
+        display: none;
+    }
+}
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    h1 {
+        color: lightblue;
+    }
+    body{
+        background-color: black;
+        background-image: none;
+    }
+    footer{
+        color:white
+    }
+    .pageTitle{
+        background-color: #212325;
+        color:white;
+    }
+    .modal-content{
+        background-color: hsla(130, 7%, 17%, 0.8);
+        color: white;
+    }
+    .close {
+        background-color: hsla(130, 7%, 17%, 0);
+        color: white;
+    }
+    #Regret{
+        color: red !important;
+    }
+    .div1{
+        background-color: black;
+        color: white;
+    }
+    .sidebar{
+        background-color: rgb(18, 18, 18);
+        color: white;
+    }
+    .myImg{
+        background-color: black;
+        color: black
+    }
+    .sidebar a{
+        background-color: rgb(37, 45, 42);
+        color: white;
+    }
+    #intro{
+        background-color: #212325;
+        color:white;
+    }
+    #skills{
+        background-color: #212325;
+        color:white;
+    }
+    #hobby{
+        background-color: #212325;
+        color:white;
+    }
+    figcaption{
+        color: black;
+    }
+    #contact{
+        background-color: #212325;
+        color:white;
+    }
+    #gang{
+        background-color: black;
+    }
+}
+/* ************************ */
+.certBtn1{
+    width: 10%;
+    text-align: center;
+    border-radius: 5%;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+.certBtn1 div{
+    font-weight:bold;
+}
+#htmlBtn svg{
+    fill: #E44D25;
+}
+#cssBtn svg{
+    fill: #1573B5;
+}
+#jsBtn svg{
+    fill: #EFD81D;
+    background-color: black;
+}
+#respBtn svg{
+    fill: #7710F1;
+}
+#pyBtn svg{
+    fill: #3276AE;
+    color: yellow;
+}
+#gitBtn svg{
+    fill: #E94E31;
+}
+.certBtn {
+    width: auto;
+    height: auto;
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid #0056b3;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 5px 7px;
+    cursor: pointer;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+.certBtn1:hover {
+    background-color: gray;
+}
+.certBtn1:active {
+    background-color: #003d7a;
+}
+.active{
+    background-color: gray;
+}
